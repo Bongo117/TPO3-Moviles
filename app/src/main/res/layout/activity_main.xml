@@ -8,7 +8,7 @@
     tools:context=".view.MainActivity">
 
     <Button
-        android:id="@+id/btBuscar2"
+        android:id="@+id/btBuscar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Buscar libro"
@@ -17,10 +17,10 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.428" />
+        app:layout_constraintVertical_bias="0.42" />
 
     <EditText
-        android:id="@+id/etTitulo2"
+        android:id="@+id/etTitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -31,6 +31,18 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.332" />
+        app:layout_constraintVertical_bias="0.303" />
+
+    <TextView
+        android:id="@+id/tvLibros"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Libros 📚"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.319"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.195" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
