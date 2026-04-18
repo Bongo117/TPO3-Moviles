@@ -6,8 +6,7 @@ Esta es una aplicación en Android que funciona como un buscador de libros. Cuen
 
 ## Se usó el patrón **MVVM**
 - **Model (`Libro`):** Es la clase de los datos del libro. Le implementamos Serializable` para poder enviar el objeto entero de una pantalla a otra mediante el Intent.
-- **ViewModel (`MainViewModel` y `DetalleViewModel`):** Acá está la lógica de la app.
-- El *MainViewModel* tiene la lista de libros y se encarga de hacer la búsqueda, mientras que el *DetalleViewModel* recibe el libro y lo prepara. Nos comunicamos con las vistas usando `MutableLiveData`.
+- **ViewModel (`MainViewModel` y `DetalleViewModel`):** Acá está la lógica de la app.El *MainViewModel* tiene la lista de libros y se encarga de hacer la búsqueda, mientras que el *DetalleViewModel* recibe el libro y lo prepara. Nos comunicamos con las vistas usando `MutableLiveData`.
 - **View (`MainActivity`, `DetalleActivity` y los XML):**Se encargan de escuchar los clicks del usuario y observar al ViewModel para actualizar los textos y las imágenes. Usamos **ViewBinding** en ambas para conectar los elementos visuales.
 
 ## Diseño de la interfaz
