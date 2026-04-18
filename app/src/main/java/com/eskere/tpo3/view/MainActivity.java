@@ -1,6 +1,7 @@
 package com.eskere.tpo3.view;
 
-import android.content.Intent;import android.os.Bundle;
+import android.content.Intent;
+import android.os.Bundle;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
@@ -21,17 +22,15 @@ public class MainActivity extends AppCompatActivity {
 
         vm = new ViewModelProvider(this).get(MainViewModel.class);
 
-
         vm.getLibroEncontrado().observe(this, libro -> {
             if (libro != null) {
                 Intent intent = new Intent(this, DetalleActivity.class);
-                intent.putExtra("libro", libro);
+                intent.putExtra("libro_seleccionado", libro);
                 startActivity(intent);
             } else {
                 Toast.makeText(this, "Libro no encontrado", Toast.LENGTH_SHORT).show();
             }
         });
-
 
         binding.btBuscar.setOnClickListener(v -> {
             String nombreLibro = binding.etTitulo.getText().toString();

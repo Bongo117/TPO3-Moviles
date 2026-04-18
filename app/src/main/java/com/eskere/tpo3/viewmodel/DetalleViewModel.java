@@ -1,24 +1,19 @@
 package com.eskere.tpo3.viewmodel;
 
-import android.content.Intent;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 import com.eskere.tpo3.model.Libro;
 
 public class DetalleViewModel extends ViewModel {
+    // mutable para guardar el libro seleccionado
+    private MutableLiveData<Libro> libroSeleccionado = new MutableLiveData<>();
 
-    private MutableLiveData<Libro> libroMutable = new MutableLiveData<>();
-
-    public LiveData<Libro> getLibro() {
-        return libroMutable;
+    // la Activity observa los datos
+    public LiveData<Libro> getLibroSeleccionado() {
+        return libroSeleccionado;
     }
-
-    // extraer el libro del intent y ponerlo en livedata
-    public void cargarLibro(Intent intent) {
-        if (intent != null && intent.hasExtra("libro")) {
-            Libro libro = (Libro) intent.getSerializableExtra("libro");
-            libroMutable.setValue(libro);
-        }
+    public void setLibro(Libro libro) {
+        libroSeleccionado.setValue(libro); // Lo metemos al mutable
     }
 }
