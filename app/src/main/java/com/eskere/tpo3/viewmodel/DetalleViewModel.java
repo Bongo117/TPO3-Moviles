@@ -14,6 +14,6 @@ public class DetalleViewModel extends ViewModel {
         return libroSeleccionado;
     }
     public void setLibro(Libro libro) {
-        libroSeleccionado.setValue(libro); // Lo metemos al mutable
+        libroSeleccionado.setValue(libro); // lo metemos al mutable
     }
 }
