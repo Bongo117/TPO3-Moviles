@@ -15,30 +15,36 @@ public class MainViewModel extends ViewModel {
     private MutableLiveData<Libro> libroEncontrado = new MutableLiveData<>();
 
     public MainViewModel() {
-        // Inicializamos una lista de prueba
+        // Inicializamos nuestra "base de datos" local
         listaLibros = new ArrayList<>();
-        listaLibros.add(new Libro("Harry Potter", "J.K. Rowling", "Un niño descubre que es mago.", R.drawable.ic_launcher_background));
-        listaLibros.add(new Libro("El Quijote", "Miguel de Cervantes", "Un hidalgo loco por los libros de caballería.", R.drawable.ic_launcher_background));
-        listaLibros.add(new Libro("El Principito", "Antoine de Saint-Exupéry", "Una historia sobre la amistad y el sentido de la vida.", R.drawable.ic_launcher_background));
+        // Dentro del constructor de MainViewModel
+        listaLibros.add(new Libro("Meditaciones", "Marco Aurelio", "Reflexiones estoicas", R.drawable.ic_launcher_background, 170));
+        listaLibros.add(new Libro("Harry Potter", "J.K. Rowling", "Un niño descubre que es mago.", R.drawable.ic_launcher_background, 1997));
+        listaLibros.add(new Libro("El Quijote", "Miguel de Cervantes", "Un hidalgo loco por los libros de caballería", R.drawable.ic_launcher_background, 1605));
+        listaLibros.add(new Libro("El Principito", "Antoine de Saint-Exupéry", "Una historia sobre la amistad y el sentido de la vida.", R.drawable.ic_launcher_background, 1943));
+        listaLibros.add(new Libro("El hobbit", "J.R.R. Tolkien", "Una aventura épica en la Tierra Media.", R.drawable.ic_launcher_background, 1937));
     }
 
-    // Exponemos el LiveData para que la Activity lo observe
+    // Exponemos el LiveData
     public LiveData<Libro> getLibroEncontrado() {
         return libroEncontrado;
     }
 
-    // Lógica para buscar el libro por título
+    // busqueda
     public void buscarLibro(String tituloIngresado) {
-        if (tituloIngresado == null || tituloIngresado.isEmpty()) return;
+        if (tituloIngresado == null || tituloIngresado.isEmpty()) {
+            return; // Este return solo corta la ejecucion, no devuelve datos.
+        }
+
+        Libro resultado = null;
 
         for (Libro libro : listaLibros) {
-            // Buscamos ignorando mayúsculas y minúsculas
             if (libro.getTitulo().equalsIgnoreCase(tituloIngresado)) {
-                libroEncontrado.setValue(libro);
-                return;
+                resultado = libro;
+                break;
             }
         }
-        // Si no lo encuentra, podemos setear null
-        libroEncontrado.setValue(null);
+
+        libroEncontrado.setValue(resultado);
     }
 }

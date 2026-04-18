@@ -8,12 +8,13 @@ public class Libro implements Serializable {
     private String autor;
     private String descripcion;
     private int imagenResId; // Para guardar el ID del recurso de la imagen (R.drawable.)
-
-    public Libro(String titulo, String autor, String descripcion, int imagenResId) {
+    private int anio;
+    public Libro(String titulo, String autor, String descripcion, int imagenResId, int anio) {
         this.titulo = titulo;
         this.autor = autor;
         this.descripcion = descripcion;
         this.imagenResId = imagenResId;
+        this.anio = anio;
     }
 
     // Getters y Setters
@@ -44,6 +45,14 @@ public class Libro implements Serializable {
     public int getImagenResId() {
         return imagenResId;
     }
+    public int getAnio() {
+        return anio;
+    }
+    public void setAnio(int anio) {
+        this.anio = anio;
+    }
+
+
 
     public void setImagenResId(int imagenResId) {
         this.imagenResId = imagenResId;

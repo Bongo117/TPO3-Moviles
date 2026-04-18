@@ -8,11 +8,13 @@
     tools:context=".view.DetalleActivity">
 
     <TextView
-        android:id="@+id/tvDescripción"
+        android:id="@+id/tvDescripcion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:text="Descripción"
+        android:text="Descripcion"
+        android:gravity="start"
+        android:lineSpacingExtra="4sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.536"
@@ -33,11 +35,11 @@
         app:layout_constraintVertical_bias="0.171" />
 
     <TextView
-        android:id="@+id/tvAño"
+        android:id="@+id/tvAnio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:text="Año"
+        android:text="Anio"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.535"
