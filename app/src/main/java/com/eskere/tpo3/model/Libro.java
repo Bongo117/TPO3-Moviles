@@ -2,12 +2,12 @@ package com.eskere.tpo3.model;
 
 import java.io.Serializable;
 
-// Usamos Serializable para poder pasar el objeto entre activities con un un Intent
+// serializable para poder pasar el objeto entre activities con un un Intent
 public class Libro implements Serializable {
     private String titulo;
     private String autor;
     private String descripcion;
-    private int imagenResId; // Para guardar el ID del recurso de la imagen (R.drawable.)
+    private int imagenResId; // R.drawable
     private int anio;
     public Libro(String titulo, String autor, String descripcion, int imagenResId, int anio) {
         this.titulo = titulo;
@@ -17,7 +17,6 @@ public class Libro implements Serializable {
         this.anio = anio;
     }
 
-    // Getters y Setters
     public String getTitulo() {
         return titulo;
     }
