@@ -20,6 +20,8 @@ public class DetalleActivity extends AppCompatActivity {
 
         viewModel = new ViewModelProvider(this).get(DetalleViewModel.class);
 
+        binding.btnBack.setOnClickListener(v -> finish());
+
         //agarrar el libro que viene viajando en el Intent
         Libro libroRecibido = (Libro) getIntent().getSerializableExtra("libro_seleccionado");
 
