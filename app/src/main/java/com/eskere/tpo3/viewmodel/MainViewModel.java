@@ -18,11 +18,11 @@ public class MainViewModel extends ViewModel {
         // Inicializamos nuestra "base de datos" local
         listaLibros = new ArrayList<>();
         // Dentro del constructor de MainViewModel
-        listaLibros.add(new Libro("Meditaciones", "Marco Aurelio", "Reflexiones estoicas", R.drawable.ic_launcher_background, 170));
-        listaLibros.add(new Libro("Harry Potter", "J.K. Rowling", "Un niño descubre que es mago.", R.drawable.ic_launcher_background, 1997));
-        listaLibros.add(new Libro("El Quijote", "Miguel de Cervantes", "Un hidalgo loco por los libros de caballería", R.drawable.ic_launcher_background, 1605));
-        listaLibros.add(new Libro("El Principito", "Antoine de Saint-Exupéry", "Una historia sobre la amistad y el sentido de la vida.", R.drawable.ic_launcher_background, 1943));
-        listaLibros.add(new Libro("El hobbit", "J.R.R. Tolkien", "Una aventura épica en la Tierra Media.", R.drawable.ic_launcher_background, 1937));
+        listaLibros.add(new Libro("Meditaciones", "Marco Aurelio", "Reflexiones estoicas", R.drawable.meditaciones, 170));
+        listaLibros.add(new Libro("Harry Potter", "J.K. Rowling", "Un niño descubre que es mago.", R.drawable.harry, 1997));
+        listaLibros.add(new Libro("El Quijote", "Miguel de Cervantes", "Un hidalgo loco por los libros de caballería", R.drawable.quijote, 1605));
+        listaLibros.add(new Libro("El Principito", "Antoine de Saint-Exupéry", "Una historia sobre la amistad y el sentido de la vida.", R.drawable.principito, 1943));
+        listaLibros.add(new Libro("El hobbit", "J.R.R. Tolkien", "Una aventura épica en la Tierra Media.", R.drawable.hobbit, 1937));
     }
 
     // Exponemos el LiveData
